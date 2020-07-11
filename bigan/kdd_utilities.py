@@ -12,7 +12,8 @@ batch_size = 50
 layer = 1
 latent_dim = 32
 dis_inter_layer_dim = 128
-init_kernel = tf.contrib.layers.xavier_initializer()
+init_kernel = tf.initializers.GlorotUniform()
+##https://stackoverflow.com/questions/55322754/how-to-do-weight-initialization-by-xavier-rule-in-tensorflow-2-0
 
 
 def encoder(x_inp, is_training=False, getter=None, reuse=False):
